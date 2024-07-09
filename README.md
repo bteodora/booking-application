@@ -128,7 +128,7 @@ Ovde možete videti izgled glavnih delova aplikacije podeljene po ulogama.
 ### Gost
 <img src="Screenshots/guestmain.png" alt="Početna stranica gosta - svetla tema" width="670">
 <img src="Screenshots/guestmaindark.png" alt="Početna stranica gosta - tamna tema" width="670">
-<img src="Screenshots/guestdelay.png" alt="Stranica zahteva za odlaganje gosta - tamna tema" width="670">
+<img src="Screenshots/accommodations_guest.png" alt="Prikaz i pretraga smeštaja - svetla tema" width="670">
 
 ### Turista
 <img src="Screenshots/touristmain.png" alt="Početna stranica turista" width="670">
