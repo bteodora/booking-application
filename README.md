@@ -1,6 +1,6 @@
 # Booking
 
-Visoko ocenjeni akademski projekat iz predmeta Specifikacija i modeliranje softvera i Interakcija čovek računar na Fakultetu tehničkih nauka. Aplikacija **Booking** omogućava korisnicima da jednostavno rezervišu smeštaj i prateće usluge, pružajući intuitivno korisničko iskustvo za različite tipove korisnika.
+Visoko ocenjeni akademski projekat iz predmeta "Specifikacija i modeliranje softvera" i "Interakcija čovek računar" na Fakultetu tehničkih nauka. Aplikacija **Booking** omogućava korisnicima da jednostavno rezervišu smeštaj i prateće usluge, pružajući intuitivno korisničko iskustvo za različite tipove korisnika.
 
 ## O Projektu
 
