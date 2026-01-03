@@ -237,8 +237,4 @@ While the current distribution relies on manual system testing, the architecture
 ### Login Window
 <img src="Screenshots/login.png" alt="Login Window" width="670">
 
----
 
-<div align="center">
-    For a detailed breakdown of the functional requirements, please refer to the <a href="SIMS_Projekat.pdf">Project Specification PDF</a>.
-</div>
