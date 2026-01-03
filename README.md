@@ -18,7 +18,7 @@
   </p>
 
   <p>
-    <a href="Specifikacija%projekta.pdf"><strong>📄 View Official Specification (PDF) »</strong></a>
+    <a href="Specifikacija projekta.pdf"><strong>📄 View Official Specification (PDF) »</strong></a>
   </p>
 </div>
 
