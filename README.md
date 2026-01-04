@@ -129,7 +129,7 @@ The application is built upon a **Monolithic Layered Architecture**, strictly ad
 ### Installation Steps
 1.  **Clone the Repository:**
     ```bash
-    git clone https://github.com/your-org/booking-system.git
+    git clone https://github.com/bteodora/Travel-Manager-Desktop-WPF.git
     cd booking-system
     ```
 2.  **Restore Dependencies:**
@@ -201,14 +201,8 @@ While the current distribution relies on manual system testing, the architecture
 *   **Cloud Integration:** moving the backend logic to an ASP.NET Core Web API.
 *   **Mobile Companion App:** Developing a MAUI app for Tourists to use strictly for ticket validation and notifications.
 
-## 15. Contributors
 
-*   **Teodora Bečejac** - *RA 37/2021*
-*   **Katarina Petrović** - *RA 17/2021*
-*   **Nataša Radmilović** - *RA 20/2021*
-*   **Akoš Kiš** - *RA 11/2021*
-
-## 16. Gallery
+## 15. Gallery
 
 ### Guide Interface
 <p float="left">
