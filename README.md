@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="WPF/Resources/Images/logo.png" alt="Booking System Logo" width="300"/>
+  <img src="logobooking.svg" alt="Booking System Logo" width="300"/>
   
   <br><br>
 
@@ -129,7 +129,7 @@ The application is built upon a **Monolithic Layered Architecture**, strictly ad
 ### Installation Steps
 1.  **Clone the Repository:**
     ```bash
-    git clone https://github.com/bteodora/Travel-Manager-Desktop-WPF.git
+    git clone https://github.com/bteodora/travel-manager-desktop-wpf.git
     cd booking-system
     ```
 2.  **Restore Dependencies:**
