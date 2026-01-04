@@ -30,8 +30,6 @@ The **Integrated Hospitality & Tourism Management System** (internally reference
 
 From complex reservation algorithms and conflict resolution to loyalty programs and renovation scheduling, the system offers a cohesive suite of tools. It is engineered with a strict adherence to **Clean Code principles**, **SOLID design patterns**, and the **Model-View-ViewModel (MVVM)** architectural pattern, ensuring scalability, testability, and maintainability.
 
-This project serves as a capstone implementation for the "Software Specification and Modeling" and "Human-Computer Interaction" courses at the Faculty of Technical Sciences, demonstrating enterprise-grade software engineering practices.
-
 ## 2. Motivation and Background
 
 The hospitality industry involves diverse stakeholders with conflicting technical proficiencies and distinct operational goals. Existing solutions often force a "one-size-fits-all" interface upon users, resulting in suboptimal efficiency for power users and accessibility barriers for novices.
