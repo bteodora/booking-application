@@ -3,7 +3,7 @@
   
   <br><br>
 
-  <h1 style="font-family: 'Segoe UI', sans-serif; font-weight: 300; letter-spacing: 2px; text-transform: uppercase;">Integrated Hospitality & Tourism Management System</h1>
+  <h1 style="font-family: 'Segoe UI', sans-serif; font-weight: 300; letter-spacing: 2px; text-transform: uppercase;">Travel Manager Desktop</h1>
   <h3 style="color: #666; font-weight: 400;">MVVM-Architected Accommodation & Tour Lifecycle System</h3>
 
   <p>
@@ -20,7 +20,9 @@
   <p>
     <a href="Specifikacija projekta.pdf"><strong>📄 View Official Specification (PDF) »</strong></a>
     ·
-    <a href="#architecture-and-design"><strong>🏛 Architecture »</strong></a>
+    <a href="#5-architecture-and-design"><strong>🏛 Architecture »</strong></a>
+    ·
+    <a href="#3-user-centric-design--hci-strategy"><strong>🧠 UX Strategy »</strong></a>
     ·
     <a href="Diagrams/"><strong>📐 UML Blueprints »</strong></a>
   </p>
