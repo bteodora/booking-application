@@ -20,7 +20,7 @@
   <p>
     <a href="Specifikacija projekta.pdf"><strong>📄 View Official Specification (PDF) »</strong></a>
     ·
-    <a href="#system-architecture"><strong>🏛 Architecture »</strong></a>
+    <a href="#architecture-and-design"><strong>🏛 Architecture »</strong></a>
     ·
     <a href="Diagrams/"><strong>📐 UML Blueprints »</strong></a>
   </p>
