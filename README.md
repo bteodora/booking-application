@@ -176,31 +176,7 @@ The solution is organized to reflect the architectural layers:
 Configuration is primarily handled via `app.config` and the `Properties` directory.
 *   **Localization:** The system supports localization infrastructure located in `LocalisationResources`.
 *   **Theming:** Light/Dark mode preferences are persisted in user settings and applied at runtime via `WPF/Styles`.
-
-## 11. Testing & Quality Assurance
-
-While the current distribution relies on manual system testing, the architecture is designed for testability.
-*   **Unit Testing:** The `Service` layer is decoupled from the UI, allowing for NUnit/xUnit tests to verify business rules (e.g., cancellation penalty calculations) in isolation.
-*   **Defensive Programming:** The application employs strict input validation (Data Annotations and custom logic) to prevent corruption of the CSV data store.
-
-## 12. Security Considerations
-
-*   **Password Storage:** While currently stored in CSV for academic demonstration, the architecture supports replacing the `UserRepository` with a secure implementation hashing passwords (e.g., BCrypt) without altering business logic.
-*   **Data Validation:** All user inputs are sanitized to prevent injection attacks or format errors during serialization.
-
-## 13. Limitations
-
-*   **Concurrency:** As a file-based system, concurrent writes from multiple instances may cause race conditions. This is a known limitation of the CSV persistence layer intended for single-client demonstration.
-*   **Scalability:** Performance may degrade with datasets exceeding 100,000 records due to in-memory loading of CSV files.
-
-## 14. Roadmap
-
-*   **Migration to SQL:** Implementing an Entity Framework Core repository to replace CSV storage.
-*   **Cloud Integration:** moving the backend logic to an ASP.NET Core Web API.
-*   **Mobile Companion App:** Developing a MAUI app for Tourists to use strictly for ticket validation and notifications.
-
-
-## 15. Gallery
+## 11. Gallery
 
 ### Guide Interface
 <p float="left">
