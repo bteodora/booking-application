@@ -1,24 +1,28 @@
 <div align="center">
-  <img src="logobooking.svg" alt="Booking System Logo" width="300"/>
+  <img src="logobooking.svg" alt="Travel Manager Logo" width="300" style="filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.2));"/>
   
   <br><br>
 
-  <h1>Integrated Hospitality & Tourism Management System</h1>
-  <h3>Desktop Application for Accommodation and Tour Lifecycle Management</h3>
+  <h1 style="font-family: 'Segoe UI', sans-serif; font-weight: 300; letter-spacing: 2px; text-transform: uppercase;">Integrated Hospitality & Tourism Management System</h1>
+  <h3 style="color: #666; font-weight: 400;">MVVM-Architected Accommodation & Tour Lifecycle System</h3>
 
   <p>
     <img src="https://img.shields.io/badge/Platform-.NET_6.0-512bd4?style=for-the-badge&logo=dotnet&logoColor=white" alt=".NET"/>
     <img src="https://img.shields.io/badge/Framework-WPF-blue?style=for-the-badge&logo=windows&logoColor=white" alt="WPF"/>
     <img src="https://img.shields.io/badge/Architecture-MVVM-green?style=for-the-badge" alt="MVVM"/>
-    <img src="https://img.shields.io/badge/Status-Production_Ready-red?style=for-the-badge" alt="Status"/>
+    <img src="https://img.shields.io/badge/Design-Persona_Driven_UX-orange?style=for-the-badge" alt="HCI"/>
   </p>
 
-  <p>
+  <p align="center" style="max-width: 800px; margin: auto;">
     <strong>A robust, monolithic desktop solution engineered to digitize and automate the complex interactions between accommodation owners, guests, tour guides, and tourists.</strong>
   </p>
 
   <p>
     <a href="Specifikacija projekta.pdf"><strong>📄 View Official Specification (PDF) »</strong></a>
+    ·
+    <a href="#system-architecture"><strong>🏛 Architecture »</strong></a>
+    ·
+    <a href="Diagrams/"><strong>📐 UML Blueprints »</strong></a>
   </p>
 </div>
 
@@ -68,7 +72,6 @@ The system is divided into four functional modules, each rich with specialized c
 *   **Advanced Analytics Engine:** A dedicated statistics dashboard utilizing `LiveCharts` to visualize occupancy rates, reservation history, and cancellation metrics on annual and monthly bases.
 *   **Renovation Scheduling:** A smart scheduling system that identifies optimal renovation windows by analyzing reservation gaps, preventing conflicts with existing bookings.
 *   **Review & Loyalty System:** A reciprocal review system. Owners achieve "Super-Owner" status based on aggregate scores (4.5+ average) and total reviews, granting visibility boosts within the search algorithm.
-*   **Interactive Forums:** A location-based communication hub where owners can moderate discussions and provide verified information to potential guests.
 
 ### 4.2 Booking & Discovery (Guest)
 *   **"Anywhere/Anytime" Search Algorithm:** A flexible search engine that suggests accommodations based on vague parameters (e.g., specific guest count and duration, but flexible dates), optimizing inventory utilization.
@@ -91,17 +94,27 @@ The system is divided into four functional modules, each rich with specialized c
 
 The application is built upon a **Monolithic Layered Architecture**, strictly adhering to the **MVVM (Model-View-ViewModel)** pattern to ensure separation of concerns.
 
-### High-Level Components
+### 5.1 High-Level Components
 1.  **Presentation Layer (WPF):** Contains XAML Views and Code-behind (minimized). It binds to ViewModels via the `INotifyPropertyChanged` interface.
 2.  **Application Layer (ViewModels):** Acts as the mediator. It processes user input, invokes business logic, and updates the View state.
 3.  **Domain Layer (Services & Models):** Encapsulates the core business rules (e.g., "Is this date range available?", "Does this user qualify for Super status?").
 4.  **Data Access Layer (Repositories):** Implements the **Repository Pattern**. It abstracts the underlying CSV file storage, providing a clean API (`Get`, `Add`, `Update`, `Delete`) to the upper layers.
 
-### Design Patterns Implemented
+### 5.2 Design Patterns Implemented
 *   **Dependency Injection (DI):** Managed via a custom `Injector` class to decouple dependencies and facilitate testing.
 *   **Observer Pattern:** Heavily used for live updates (e.g., notifying a Tourist view when a Guide updates a tour point).
-*   **Strategy Pattern:** implied in the calculation of varying discount strategies for loyalty programs.
+*   **Strategy Pattern:** Used in the calculation of varying discount strategies for loyalty programs.
 *   **Singleton Pattern:** Used for global configuration and session management.
+
+### 5.3 System Modeling & UML Artifacts
+The development process followed a model-driven approach. The `Diagrams/` directory contains a comprehensive suite of UML blueprints ensuring logical consistency before implementation:
+
+*   **Use Case Diagrams:** Define functional boundaries and interactions for all 4 personas.
+*   **Class Diagrams:** Illustrate the static structure, inheritance hierarchies, and relationships between Domain Models and ViewModels.
+*   **Sequence Diagrams:** Visualize the runtime message exchange between the View, ViewModel, and Service layers.
+*   **Activity Diagrams:** Model complex business workflows and state transitions.
+
+> **[Explore the Engineering Diagrams](Diagrams/)**
 
 ## 6. Technology Stack
 
@@ -148,34 +161,30 @@ The system uses a unified login form that routes users to their specific dashboa
 *   **Guide:** `username: guide1`, `password: guide1`
 *   **Tourist:** `username: tourist1`, `password: tourist1`
 
-### Workflow Example: Booking an Accommodation
-1.  Log in as **Guest**.
-2.  Navigate to "Explore Accommodations."
-3.  Use the filter sidebar to select "City: Paris" and "Type: Apartment."
-4.  Select a property and click "Reserve."
-5.  Enter dates. If dates are taken, the system will suggest the nearest available alternative.
-6.  Confirm booking. The logic updates `reservations.csv` and decrements availability.
-
 ## 9. Project Structure
 
 The solution is organized to reflect the architectural layers:
 
-*   **`Application`**: Contains core business logic services (`ReservationServices`, `RateServices`).
-*   **`Domain`**: Holds the POCO (Plain Old CLR Object) models and interface definitions.
-*   **`Repository`**: Implementation of data persistence, reading/writing to CSVs.
-*   **`WPF`**: The presentation layer.
-    *   `Views/Windows`: Top-level windows.
-    *   `Views/Pages`: Navigable content areas.
-    *   `ViewModels`: Glue code between Views and Models.
-    *   `Resources`: XAML styles, converters, and assets.
-*   **`Observer`**: Custom implementation of the reactive update mechanism.
-*   **`Utilities`**: Helper classes for PDF generation and Theme switching.
+```text
+TravelManager/
+├── Diagrams/               # UML Artifacts (Class, Sequence, Activity, Use Case)
+├── Application/            # Core Business Logic Services
+├── Domain/                 # POCO Models & Interfaces
+├── Repository/             # Data Access Implementation (CSV)
+├── WPF/                    # Presentation Layer
+│   ├── Views/              # XAML Windows & Pages
+│   ├── ViewModels/         # MVVM Logic
+│   └── Resources/          # Styles & Assets
+├── Observer/               # Reactive Update Mechanism
+└── Utilities/              # PDF Generation & Helpers
+```
 
 ## 10. Configuration
 
 Configuration is primarily handled via `app.config` and the `Properties` directory.
 *   **Localization:** The system supports localization infrastructure located in `LocalisationResources`.
 *   **Theming:** Light/Dark mode preferences are persisted in user settings and applied at runtime via `WPF/Styles`.
+
 ## 11. Gallery
 
 ### Guide Interface
@@ -204,5 +213,3 @@ Configuration is primarily handled via `app.config` and the `Properties` directo
 
 ### Login Window
 <img src="Screenshots/login.png" alt="Login Window" width="670">
-
-
